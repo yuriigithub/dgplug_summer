@@ -1,0 +1,12 @@
+def distro_details():
+    with open('/etc/os-release', 'r') as os_info:
+   
+        for line in os_info:
+            tokens = line.split('=')
+            if tokens[0] == 'NAME' :
+                name = tokens[1].strip(' "\n ')
+            elif tokens[0] == 'VERSION_ID' :
+                version_id = tokens[1].strip(' "\n ')
+    return (name, version_id)
+
+print (distro_details())
