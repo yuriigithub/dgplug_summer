@@ -1,0 +1,13 @@
+def get_modules(path):
+    modules = []
+
+    with open(path, 'r') as fileobj:
+       
+        for line in fileobj:
+            if line.startswith('from'):
+                modules.append(line.split()[3])
+            elif line.startswith('import'):
+                modules.append(line.split()[1])
+    return modules
+print(get_modules('test.py'))
+print(get_modules('long_side.py'))
