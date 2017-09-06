@@ -1,0 +1,15 @@
+start = int(input('Enter start number: '))
+end = int(input('Enter end number: '))
+counter = start
+print("While loop output------")
+while(counter <= end):
+    print(counter)
+    counter = counter + 1
+    
+print("Infinite while loop output------")
+counter = start
+while True:
+    print(counter)
+    counter = counter + 1
+    if(counter > end):
+break
